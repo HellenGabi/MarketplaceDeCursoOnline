@@ -59,3 +59,12 @@ Ver uma pitada de pimenta
 Algo que fique dificil
 Fazer dashboard 
 Problemas maiores a serem resolvidos
+
+
+
+
+# ETAPA 2
+
+== Cliente-Server
+
+
