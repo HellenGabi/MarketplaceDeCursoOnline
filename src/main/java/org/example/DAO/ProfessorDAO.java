@@ -15,7 +15,7 @@ public class ProfessorDAO {
 
     public void inserirProfessor(Professor prof){
 
-        String query = "INSERT INTO nome, cpf, email, idade, formacao FROM Professor";
+        String query = "INSERT INTO Professor(nome, cpf, email, idade, formacao) VALUES (?,?,?,?,?)";
 
         try (Connection conn = Conexao.conectar();
              PreparedStatement stmt  = conn.prepareStatement(query)){
@@ -26,7 +26,6 @@ public class ProfessorDAO {
             stmt.setString(5, prof.getFormacao());
             stmt.executeUpdate();
 
-            System.out.println("Professor Cadastrado com sucesso!!");
         }catch (SQLException e){
             e.printStackTrace();
         }
@@ -57,5 +56,23 @@ public class ProfessorDAO {
             e.printStackTrace();
         }
         return professores;
+    }
+
+    public boolean buscarProfessorPorId(int idProfessor) {
+
+        String query = "SELECT id, nome FROM Professor WHERE id = ?";
+
+        try (Connection conn = Conexao.conectar();
+        PreparedStatement stmt = conn.prepareStatement(query)){
+            stmt.setInt(1, idProfessor);
+            ResultSet rs = stmt.executeQuery();
+
+            if(rs.next()){
+                return true;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 }

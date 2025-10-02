@@ -1,0 +1,102 @@
+= 📚 Marketplace de Cursos Online
+:icons: font
+:toc: left
+:toclevels: 2
+
+== 📝 Descrição
+A NebulaPro é uma plataforma que oferece cursos online para alunos em diversas áreas de conhecimento, como tecnologia, design, negócios e idiomas. O objetivo da empresa é criar um espaço em que os instrutores possam oferecer seus cursos e os alunos possam se inscrever, aprender e obter certificação. Atualmente, a empresa opera manualmente e não possui uma plataforma centralizada, o que gera problemas de organização, falta de visibilidade sobre os alunos e dificuldade na gestão dos cursos.
+
+== 🎯 Problema
+A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam cadastrar seus cursos, gerenciar as turmas e interagir com os alunos. Ao mesmo tempo, os alunos devem ser capazes de buscar cursos, se inscrever e acompanhar seu progresso. A empresa também precisa de um controle robusto para gerenciar os pagamentos, os certificados dos alunos e a avaliação da qualidade dos cursos.
+
+== 🗂️ Requisitos Funcionais
+
+**1️⃣ Cadastro de Curso**
+
+*   O sistema deve permitir que um curso seja cadastrado.
+
+*   Dados necessários: Id, Nome, IdProfessor, CargaHoraria, Status (INICIANDO, EM_ANDAMENTO, CONCLUÍDA), Descrição.
+
+**2️⃣ Cadastro de Aluno**
+
+*  O sistema deve permitir o cadastro de um aluno.
+
+*  Dados necessários: id, nome, CPF, email, idade.
+
+*  O CPF deve ser único no sistema.
+
+**3️⃣ Cadastro de Professor**
+
+* O sistema deve permitir o cadastro de um professor.
+
+* Dados necessários: nome, formação acadêmica.
+
+**4️⃣ Associação de Professor a Curso**
+
+* O sistema deve permitir a associação de um professor a um curso.
+
+* O professor deve ser associado apenas a um curso, de acordo com sua disponibilidade.
+
+**5️⃣ Cancelamento de Matrícula**
+
+* O sistema deve permitir que um aluno cancele sua matrícula em um curso.
+
+**6️⃣ Busca de Aluno por Curso**
+
+* O sistema deve permitir a busca de alunos matriculados em um curso específico.
+
+**7️⃣ Listagem de Cursos**
+
+* O sistema deve permitir a listagem de todos os cursos cadastrados.
+
+**8️⃣ Listagem de Alunos**
+
+* O sistema deve permitir a listagem de todos os alunos cadastrados.
+
+**9️⃣ Listagem de Professores**
+
+* O sistema deve permitir a listagem de todos os professores cadastrados.
+
+**1️⃣0️⃣ Matrícula de Aluno em Curso**
+
+* O sistema deve permitir que um aluno se matricule em um curso, gerando uma “nota” mostrando que está matriculado.
+
+**1️⃣1️⃣ Validação de CPF**
+
+* O sistema deve validar a unicidade do CPF para garantir que não existam duplicatas de alunos ou professores com o mesmo CPF.
+
+**1️⃣2️⃣ Validação de Disponibilidade do Professor**
+
+* O sistema deve verificar se o professor está disponível para ser associado ao curso antes de realizar a associação.
+
+== 🔐 Requisitos não Funcionais
+
+== 🛠️ Tecnologias Utilizadas
+
+* Java
+
+* JDBC
+
+* MySQL
+
+* Padrão DAO / MVC
+
+* API REST (em versões futuras)
+
+== 🚀 Futuras Expansões
+
+* Integração com API de pagamento
+
+* Autenticação com controle de acesso (aluno, professor, admin)
+
+* Dashboard administrativo com gráficos e KPIs
+
+== 🫱🏾‍🫲🏿 Integrantes do Projeto
+Nosso grupo é composto por: 
+
+*  **Hellen Gabriela Scarantti**
+https://github.com/HellenGabi
+
+*  **Vitor Eduardo Eleoterio**
+https://github.com/SGA-OKC
+

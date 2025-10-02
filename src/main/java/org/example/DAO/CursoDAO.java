@@ -12,12 +12,12 @@ import java.util.List;
 
 public class CursoDAO {
 
-    public void inserirCurso(Curso curso){
+    public void inserirCurso(Curso curso) {
 
         String query = "INSERT INTO Curso (nome, idProfessor, cargaHoraria, status, descricao) VALUES (?,?,?,?,?)";
 
         try (Connection conn = Conexao.conectar();
-             PreparedStatement stmt = conn.prepareStatement(query)){
+             PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setString(1, curso.getNome());
             stmt.setInt(2, curso.getIdProfessor());
             stmt.setInt(3, curso.getCargaHoraria());
@@ -26,22 +26,22 @@ public class CursoDAO {
             stmt.executeUpdate();
 
             System.out.println("Curso Cadastrado com sucesso!!");
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public List<Curso> listaCurso(){
+    public List<Curso> listaCurso() {
 
         List<Curso> cursos = new ArrayList<>();
 
         String query = "SELECT id, nome, idProfessor, cargaHoraria, status, descricao FROM Curso";
 
         try (Connection conn = Conexao.conectar();
-        PreparedStatement stmt = conn.prepareStatement(query)){
+             PreparedStatement stmt = conn.prepareStatement(query)) {
             ResultSet rs = stmt.executeQuery();
 
-            if(rs.next()){
+            while (rs.next()) {
                 int id = rs.getInt("id");
                 String nome = rs.getString("nome");
                 int idProfessor = rs.getInt("idProfessor");
@@ -51,9 +51,28 @@ public class CursoDAO {
                 var curso = new Curso(id, nome, idProfessor, cargaHoraria, status, descricao);
                 cursos.add(curso);
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return cursos;
     }
+
+    public boolean buscarCursoId(int idCurso) {
+
+        String query = "SELECT id, nome FROM Aluno WHERE id = ?";
+
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setInt(1, idCurso);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }

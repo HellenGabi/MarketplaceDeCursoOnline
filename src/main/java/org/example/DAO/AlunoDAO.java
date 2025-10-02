@@ -41,7 +41,7 @@ public class AlunoDAO {
         PreparedStatement st = conn.prepareStatement(query)){
             ResultSet rs = st.executeQuery();
 
-            if(rs.next()){
+            while(rs.next()){
                 int id = rs.getInt("id");
                 String nome = rs.getString("nome");
                 String cpf = rs.getString("cpf");
@@ -58,4 +58,23 @@ public class AlunoDAO {
         }
         return alunos;
     }
+
+    public boolean buscarAlunoId(int idAluno) {
+
+        String query = "SELECT id, nome FROM Aluno WHERE id = ?";
+
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(query)){
+            stmt.setInt(1, idAluno);
+            ResultSet rs = stmt.executeQuery();
+
+            if(rs.next()){
+                return true;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }
