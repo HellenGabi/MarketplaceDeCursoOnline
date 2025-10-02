@@ -11,13 +11,13 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 == 🗒️ Requisitos Funcionais
 
-**Cadastro de Curso**
+**1️⃣ Cadastro de Curso**
 
 *   O sistema deve permitir que um curso seja cadastrado.
 
 *   Dados necessários: Id, Nome, IdProfessor, CargaHoraria, Status (INICIANDO, EM_ANDAMENTO, CONCLUÍDA), Descrição.
 
-**Cadastro de Aluno**
+**2️⃣ Cadastro de Aluno**
 
 *  O sistema deve permitir o cadastro de um aluno.
 
@@ -25,47 +25,47 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 *  O CPF deve ser único no sistema.
 
-**Cadastro de Professor**
+**3️⃣ Cadastro de Professor**
 
 * O sistema deve permitir o cadastro de um professor.
 
 * Dados necessários: nome, formação acadêmica.
 
-**Associação de Professor a Curso**
+**4️⃣ Associação de Professor a Curso**
 
 * O sistema deve permitir a associação de um professor a um curso.
 
 * O professor deve ser associado apenas a um curso, de acordo com sua disponibilidade.
 
-**Cancelamento de Matrícula**
+**5️⃣ Cancelamento de Matrícula**
 
 * O sistema deve permitir que um aluno cancele sua matrícula em um curso.
 
-**Busca de Aluno por Curso**
+**6️⃣ Busca de Aluno por Curso**
 
 * O sistema deve permitir a busca de alunos matriculados em um curso específico.
 
-**Listagem de Cursos**
+**7️⃣ Listagem de Cursos**
 
 * O sistema deve permitir a listagem de todos os cursos cadastrados.
 
-**Listagem de Alunos**
+**8️⃣ Listagem de Alunos**
 
 * O sistema deve permitir a listagem de todos os alunos cadastrados.
 
-**Listagem de Professores**
+**9️⃣ Listagem de Professores**
 
 * O sistema deve permitir a listagem de todos os professores cadastrados.
 
-**Matrícula de Aluno em Curso**
+**1️⃣0️⃣ Matrícula de Aluno em Curso**
 
 * O sistema deve permitir que um aluno se matricule em um curso, gerando uma “nota” mostrando que está matriculado.
 
-**Validação de CPF**
+**1️⃣1️⃣ Validação de CPF**
 
 * O sistema deve validar a unicidade do CPF para garantir que não existam duplicatas de alunos ou professores com o mesmo CPF.
 
-**Validação de Disponibilidade do Professor**
+**1️⃣2️⃣ Validação de Disponibilidade do Professor**
 
 * O sistema deve verificar se o professor está disponível para ser associado ao curso antes de realizar a associação.
 
