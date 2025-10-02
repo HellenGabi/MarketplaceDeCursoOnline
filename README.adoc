@@ -84,7 +84,13 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 * API REST (em versões futuras)
 
 
+== 🚀 Futuras Expansões
 
+* Integração com API de pagamento
+
+* Autenticação com controle de acesso (aluno, professor, admin)
+
+* Dashboard administrativo com gráficos e KPIs
 
 == 🫱🏾‍🫲🏿 Integrantes do Projeto
 Nosso grupo é composto por: 
