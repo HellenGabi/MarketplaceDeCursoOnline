@@ -71,6 +71,17 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 == 🔐 Requisitos não Funcionais
 
+== 🛠️ Tecnologias Utilizadas
+
+* Java
+
+* JDBC
+
+* MySQL
+
+* Padrão DAO / MVC
+
+* API REST (em versões futuras)
 
 
 
