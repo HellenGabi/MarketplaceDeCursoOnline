@@ -40,7 +40,9 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 * O sistema deve permitir o cadastro de um professor.
 
-* Dados necessários: nome, formação acadêmica.
+* Dados necessários: 
+           ** nome
+           ** formação acadêmica
 
 **4️⃣ Associação de Professor a Curso**
 
