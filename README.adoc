@@ -80,6 +80,9 @@ Já na parte estrutural usamos o padrão Decorator 
 E por fim na parte comportamental foi o padrão Observer 
 
 == 🏡 Modelagem Arquitetural
+**Diagrama de Classe**
+
+image::[alt=Diagrama, width=200px]
 
 == 🛠️ Tecnologias Utilizadas
 
