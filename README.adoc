@@ -15,13 +15,24 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 *   O sistema deve permitir que um curso seja cadastrado.
 
-*   Dados necessários: Id, Nome, IdProfessor, CargaHoraria, Status (INICIANDO, EM_ANDAMENTO, CONCLUÍDA), Descrição.
+*   Dados necessários: 
+          ** Id 
+          ** Nome
+          ** IdProfessor
+          ** CargaHoraria
+          ** Status (INICIANDO, EM_ANDAMENTO, CONCLUÍDA)
+          ** Descrição
 
 **2️⃣ Cadastro de Aluno**
 
 *  O sistema deve permitir o cadastro de um aluno.
 
-*  Dados necessários: id, nome, CPF, email, idade.
+*  Dados necessários: 
+          ** id
+          ** nome
+          ** CPF
+          ** email
+          ** idade
 
 *  O CPF deve ser único no sistema.
 
