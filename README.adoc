@@ -71,6 +71,16 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 == 🔐 Requisitos não Funcionais
 
+== 📓 Padrões Aplicados
+
+Na parte criacional foi usado o padrão Singleton
+
+Já na parte estrutural usamos o padrão Decorator 
+
+E por fim na parte comportamental foi o padrão Observer 
+
+== 🏡 Modelagem Arquitetural
+
 == 🛠️ Tecnologias Utilizadas
 
 * Java
