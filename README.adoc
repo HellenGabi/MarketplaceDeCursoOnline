@@ -33,6 +33,8 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
           ** CPF
           ** email
           ** idade
+          ** cursoDesejado
+          ** datatEntrada
 
 *  O CPF deve ser único no sistema.
 
@@ -41,7 +43,11 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 * O sistema deve permitir o cadastro de um professor.
 
 * Dados necessários: 
+           ** id
            ** nome
+           ** cpf
+           ** email
+           ** idade
            ** formação acadêmica
 
 **4️⃣ Associação de Professor a Curso**
