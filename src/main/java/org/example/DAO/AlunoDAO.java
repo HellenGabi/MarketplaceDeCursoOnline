@@ -2,7 +2,6 @@ package org.example.DAO;
 
 import org.example.DATABASE.Conexao;
 import org.example.MODEL.Aluno;
-
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ public class AlunoDAO {
             st.setDate(6, Date.valueOf(aluno.getDataEntrada()));
             st.executeUpdate();
 
-            System.out.println("Aluno inserido com Sucesso!");
+            System.out.println("Aluno cadastrado com sucesso!");
         } catch (SQLException e){
             e.printStackTrace();
         }
@@ -35,7 +34,7 @@ public class AlunoDAO {
 
         List<Aluno> alunos = new ArrayList<>();
 
-        String query =  "SELECT id, nome, cpf, email, idade, cursoDesejado, dataEntrada FROM Alunos";
+        String query =  "SELECT id, nome, cpf, email, idade, cursoDesejado, dataEntrada FROM Aluno";
 
         try (Connection conn = Conexao.conectar();
         PreparedStatement st = conn.prepareStatement(query)){

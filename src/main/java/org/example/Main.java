@@ -27,12 +27,24 @@ public class Main {
 
         while (true) {
             // Exibir o menu
-            System.out.println("\n--- Menu ---");
+            System.out.println("""
+                    
+                     ____________________________________
+                    |               Menu                 |
+                    |____________________________________|
+                     
+                    """);
             System.out.println("1. Cadastrar Aluno");
             System.out.println("2. Cadastrar Professor");
             System.out.println("3. Cadastrar Curso");
             System.out.println("4. Matricular Aluno em Curso");
-            System.out.println("5. Sair");
+            System.out.println("5. Listar Alunos matriculados");
+            System.out.println("6. Listar Professores matriculados");
+            System.out.println("7. Listar Cursos");
+            System.out.println("8. Associar Professor ao Curso");
+            System.out.println("9. Cancelar Matricula");
+            System.out.println("10. Buscar Aluno por Curso");
+            System.out.println("11. Sair");
             System.out.print("Escolha uma opção: ");
 
             int opcao = Integer.parseInt(scanner.nextLine());
@@ -48,9 +60,27 @@ public class Main {
                     cadastrarCurso();
                     break;
                 case 4:
-                    //matricularAluno();
+                    matricularAluno();
                     break;
                 case 5:
+                    listarAlunos();
+                    break;
+                case 6:
+                    listarProfessores();
+                    break;
+                case 7:
+                    listarCursos();
+                    break;
+                case 8:
+                    associarProfACurso();
+                    break;
+                case 9:
+                    //cancelamentoMatricula();
+                    break;
+                case 10:
+                    //buscarAlunoCurso();
+                    break;
+                case 11:
                     System.out.println("Saindo...");
                     scanner.close();
                     return;
@@ -61,7 +91,7 @@ public class Main {
     }
 
     private static void cadastrarAluno() {
-        System.out.println("\nCadastro de Aluno:");
+        System.out.println("\n -- Cadastro de Aluno --");
 
         System.out.print("Informe o nome do aluno: ");
         String nomeAluno = scanner.nextLine();
@@ -87,12 +117,10 @@ public class Main {
         Aluno aluno = new Aluno(nomeAluno, cpfAluno, emailAluno, idadeAluno, cursoDesejado, LocalDate.now());
         AlunoDAO dao = new AlunoDAO();
         dao.inserirAluno(aluno);
-
-        System.out.println("Aluno cadastrado com sucesso!");
     }
 
     private static void cadastrarProfessor() {
-        System.out.println("\nCadastro de Professor:");
+        System.out.println("\n -- Cadastro de Professor --");
 
         System.out.print("Informe o nome do professor: ");
         String nomeProfessor = scanner.nextLine();
@@ -117,7 +145,7 @@ public class Main {
     }
 
     private static void cadastrarCurso() {
-        System.out.println("\nCadastro de Curso:");
+        System.out.println("\n -- Cadastro de Curso -- ");
 
         System.out.print("Informe o nome do curso: ");
         String nomeCurso = scanner.nextLine();
@@ -131,7 +159,6 @@ public class Main {
         System.out.print("Digite o ID do professor: ");
         int idProfessor = Integer.parseInt(scanner.nextLine());
 
-
         CursoDAO dao = new CursoDAO();
         if(dao.buscarCursoId(idProfessor)){
             System.out.println("Professor não encontrado!");
@@ -144,42 +171,87 @@ public class Main {
         System.out.println("Curso cadastrado com sucesso!");
     }
 
-//    private static void matricularAluno(AlunoDAO alunoDAO, CursoDAO cursoDAO, MatriculaDAO matriculaDAO) {
-//        System.out.println("\nMatrícula de Aluno em Curso:");
-//
-//        System.out.println("Lista de Alunos:");
-//        for (Aluno a : alunoDAO.listaAluno()) {
-//            System.out.println("ID: " + a.getId() + " - Nome: " + a.getNome());
-//        }
-//
-//        System.out.println("\nLista de Cursos:");
-//        for (Curso c : cursoDAO.listaCurso()) {
-//            System.out.println("ID: " + c.getId() + " - Nome: " + c.getNome());
-//        }
-//
-//        System.out.print("\nInforme o ID do aluno: ");
-//        int idAluno = Integer.parseInt(scanner.nextLine());
-//
-//        System.out.print("Informe o ID do curso: ");
-//        int idCurso = Integer.parseInt(scanner.nextLine());
-//
-//        boolean aluno = alunoDAO.buscarAlunoId(idAluno);
-//        boolean curso = cursoDAO.buscarCursoId(idCurso);
-//
-//        if (!aluno) {
-//            System.out.println("Aluno não encontrado!");
-//            return;
-//        }
-//
-//        if (!curso) {
-//            System.out.println("Curso não encontrado!");
-//            return;
-//        }
-//
-//        // Criar a matrícula
-//        Matricula matricula = new Matricula(aluno.getId(), curso.getId(), LocalDate.now(), 0);
-//        matriculaDAO.inserirMatricula(matricula);
-//
-//        System.out.println("Aluno matriculado com sucesso no curso " + curso.getNome());
-//    }
+   private static void matricularAluno() {
+       AlunoDAO alunoDAO = new AlunoDAO();
+       CursoDAO cursoDAO = new CursoDAO();
+       MatriculaDAO matriculaDAO = new MatriculaDAO();
+
+        System.out.println("\n -- Matrícula de Aluno em Curso --    ");
+
+       System.out.println("Lista de Alunos:");
+       for (Aluno a : alunoDAO.listaAluno()) {
+           System.out.println("ID: " + a.getId() + " - Nome: " + a.getNome());
+       }
+
+       System.out.println("\nLista de Cursos:");
+       for (Curso c : cursoDAO.listaCurso()) {
+           System.out.println("ID: " + c.getId() + " - Nome: " + c.getNome());
+       }
+
+       System.out.print("\nInforme o ID do aluno: ");
+       int idAluno = Integer.parseInt(scanner.nextLine());
+
+       System.out.print("Informe o ID do curso: ");
+       int idCurso = Integer.parseInt(scanner.nextLine());
+
+       boolean aluno = alunoDAO.buscarAlunoId(idAluno);
+       boolean curso = cursoDAO.buscarCursoId(idCurso);
+
+       if (!aluno) {
+           System.out.println("Aluno não encontrado!");
+           return;
+       }
+
+       if (!curso) {
+           System.out.println("Curso não encontrado!");
+           return;
+       }
+
+       // Criar a matrícula
+       Matricula matricula = new Matricula(idAluno, idCurso, LocalDate.now(), 0);
+       matriculaDAO.inserirMatricula(matricula);
+
+       System.out.println("Aluno matriculado com sucesso no curso ");
+   }
+   public static void listarAlunos(){
+        AlunoDAO dao = new AlunoDAO();
+
+       System.out.println("Lista de alunos matriculados: ");
+       for (Aluno a : dao.listaAluno()) {
+           System.out.println("\n ---- ALUNOS ----");
+           System.out.println("ID: " + a.getId());
+           System.out.println("Nome: " + a.getNome());
+           System.out.println("Curso Desejado: " + a.getCursoDesejado());
+       }
+   }
+    public static void listarProfessores(){
+        ProfessorDAO dao = new ProfessorDAO();
+
+        System.out.println("Lista de professores matriculados: ");
+        for (Professor p : dao.listaProf()) {
+            System.out.println("\n ---- PROFESSORES ----");
+            System.out.println("ID: " + p.getId());
+            System.out.println("Nome: " + p.getNome());
+            System.out.println("Formação: " + p.getFormacao());
+        }
+    }
+
+    public static void listarCursos(){
+        CursoDAO dao = new CursoDAO();
+
+        System.out.println("Lista de cursos: ");
+        System.out.println("-------------------------------------------");
+        for (Curso c : dao.listaCurso()) {
+            System.out.println("\n---------------- CURSOS ----------------");
+            System.out.println("\nNome: " + c.getNome());
+            System.out.println("\nCarga Horaria: " + c.getCargaHoraria());
+            System.out.println("\nStatus: " + c.getStatus());
+            System.out.println("\nDescrição: " + c.getDescricao());
+            System.out.println("-------------------------------------------");
+        }
+    }
+
+    public static void associarProfACurso(){
+
+    }
 }

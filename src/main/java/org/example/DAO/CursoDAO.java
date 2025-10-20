@@ -45,7 +45,7 @@ public class CursoDAO {
                 int id = rs.getInt("id");
                 String nome = rs.getString("nome");
                 int idProfessor = rs.getInt("idProfessor");
-                int cargaHoraria = rs.getInt("caraHoraria");
+                int cargaHoraria = rs.getInt("cargaHoraria");
                 String status = rs.getString("status");
                 String descricao = rs.getString("descricao");
                 var curso = new Curso(id, nome, idProfessor, cargaHoraria, status, descricao);

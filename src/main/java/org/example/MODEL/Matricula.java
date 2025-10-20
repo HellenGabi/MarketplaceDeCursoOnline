@@ -1,8 +1,10 @@
 package org.example.MODEL;
 
+import org.example.CONTROLLER.AlunoController;
+
 import java.time.LocalDate;
 
-public class Matricula {
+public class Matricula  {
 
     private int id;
     private int idAluno;
