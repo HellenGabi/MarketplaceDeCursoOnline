@@ -15,13 +15,26 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 *   O sistema deve permitir que um curso seja cadastrado.
 
-*   Dados necessários: Id, Nome, IdProfessor, CargaHoraria, Status (INICIANDO, EM_ANDAMENTO, CONCLUÍDA), Descrição.
+*   Dados necessários: 
+          ** Id 
+          ** Nome
+          ** IdProfessor
+          ** CargaHoraria
+          ** Status (INICIANDO, EM_ANDAMENTO, CONCLUÍDA)
+          ** Descrição
 
 **2️⃣ Cadastro de Aluno**
 
 *  O sistema deve permitir o cadastro de um aluno.
 
-*  Dados necessários: id, nome, CPF, email, idade.
+*  Dados necessários: 
+          ** id
+          ** nome
+          ** CPF
+          ** email
+          ** idade
+          ** cursoDesejado
+          ** datatEntrada
 
 *  O CPF deve ser único no sistema.
 
@@ -29,7 +42,13 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 * O sistema deve permitir o cadastro de um professor.
 
-* Dados necessários: nome, formação acadêmica.
+* Dados necessários: 
+           ** id
+           ** nome
+           ** cpf
+           ** email
+           ** idade
+           ** formação acadêmica
 
 **4️⃣ Associação de Professor a Curso**
 
@@ -61,14 +80,6 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 * O sistema deve permitir que um aluno se matricule em um curso, gerando uma “nota” mostrando que está matriculado.
 
-**1️⃣1️⃣ Validação de CPF**
-
-* O sistema deve validar a unicidade do CPF para garantir que não existam duplicatas de alunos ou professores com o mesmo CPF.
-
-**1️⃣2️⃣ Validação de Disponibilidade do Professor**
-
-* O sistema deve verificar se o professor está disponível para ser associado ao curso antes de realizar a associação.
-
 == 🔐 Requisitos não Funcionais
 
 == 📓 Padrões Aplicados
@@ -80,6 +91,13 @@ Já na parte estrutural usamos o padrão Decorator 
 E por fim na parte comportamental foi o padrão Observer 
 
 == 🏡 Modelagem Arquitetural
+**Diagrama de Classe**
+
+image::diagramaClasse.jpg[alt=Diagrama, width=200px]
+
+== 💡 Estratégias de Segurança e Qualidade
+
+== 💼 Organização do Trabalho e Metodologia
 
 == 🛠️ Tecnologias Utilizadas
 
