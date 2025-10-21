@@ -12,6 +12,8 @@ import org.example.MODEL.Professor;
 import org.example.UTIL.Validacoes;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -75,7 +77,7 @@ public class Main {
                     associarProfACurso();
                     break;
                 case 9:
-                    //cancelamentoMatricula();
+                    cancelamentoMatricula();
                     break;
                 case 10:
                     //buscarAlunoCurso();
@@ -243,15 +245,77 @@ public class Main {
         System.out.println("-------------------------------------------");
         for (Curso c : dao.listaCurso()) {
             System.out.println("\n---------------- CURSOS ----------------");
-            System.out.println("\nNome: " + c.getNome());
-            System.out.println("\nCarga Horaria: " + c.getCargaHoraria());
-            System.out.println("\nStatus: " + c.getStatus());
-            System.out.println("\nDescrição: " + c.getDescricao());
+            System.out.println("ID: " + c.getId());
+            System.out.println("Nome: " + c.getNome());
+            System.out.println("Carga Horaria: " + c.getCargaHoraria());
+            System.out.println("Status: " + c.getStatus());
+            System.out.println("Descrição: " + c.getDescricao());
             System.out.println("-------------------------------------------");
         }
     }
 
-    public static void associarProfACurso(){
+    public static void associarProfACurso() {
+        System.out.println("Selecione a ordem que deseja: ");
+
+        List<Integer> opcoesProf = new ArrayList<>();
+        var profDAO = new ProfessorDAO();
+        List<Professor> listarProfessor = profDAO.listaProf();
+
+        for (Professor p : listarProfessor) {
+            System.out.println("\n------- PROFESSOR ----------");
+            System.out.println("ID: " + p.getId());
+            System.out.println("Nome: " + p.getNome());
+            System.out.println("Formação: " + p.getFormacao());
+
+            opcoesProf.add(p.getId());
+        }
+
+        System.out.println("Digite o ID do professor que deseja: ");
+        int idProf = scanner.nextInt();
+        scanner.nextLine();
+
+        if (opcoesProf.contains(idProf)) {
+            List<Integer> opcoesCurso = new ArrayList<>();
+            var cursDAO = new CursoDAO();
+            List<Curso> listCurso = cursDAO.listaCurso();
+
+            for (Curso c : listCurso) {
+                System.out.println("\n ----------- CURSO ------------");
+                System.out.println("Nome: " + c.getNome());
+                System.out.println("\nCarga Horaria: " + c.getCargaHoraria());
+                System.out.println("\nStatus: " + c.getStatus());
+                System.out.println("\nDescrição: " + c.getDescricao());
+                System.out.println("-------------------------------------------");
+
+                opcoesCurso.add(c.getId());
+            }
+
+            System.out.println("Digite o ID do curso que deseja: ");
+            int idCurso = scanner.nextInt();
+            scanner.nextLine();
+
+            if (opcoesCurso.contains(idCurso)) {
+
+                //Professor prof = profDAO.buscarProfessorPorId(idProf);
+                //Curso cursoSelecionado = cursDAO.buscarCursoPorId(idCurso);
+
+                // Realizando a associação
+                //prof.adicionarCurso(cursoSelecionado); // Método para adicionar curso ao professor
+
+                // Salvar a alteração (se for necessário no banco de dados)
+                //profDAO.atualizarProfessor(prof);
+
+                //System.out.println("Professor " + prof.getNome() + " associado ao curso " + cursoSelecionado.getNome() + " com sucesso!");
+            } else {
+                System.out.println("ID de curso inválido.");
+            }
+        } else {
+            System.out.println("ID de professor inválido.");
+        }
+    }
+    public static void cancelamentoMatricula(){
 
     }
 }
+
+

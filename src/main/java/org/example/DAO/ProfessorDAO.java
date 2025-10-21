@@ -75,4 +75,15 @@ public class ProfessorDAO {
         }
         return false;
     }
+
+    public void atualizarProfessor(int idProfessor) {
+        String query = "UPDATE SET Professor";
+
+        try(Connection conn = Conexao.conectar();
+            PreparedStatement stmt = conn.prepareStatement(query)){
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
 }

@@ -70,4 +70,17 @@ public class MatriculaDAO {
         return false;
     }
 
+    public void deletarMatricula(int idMatricula) {
+        String query = "DELETE FROM Matricula WHERE id = ?";
+
+        try(Connection conn = Conexao.conectar();
+            PreparedStatement stmt = conn.prepareStatement(query)){
+
+            stmt.setInt(1, idMatricula);
+            stmt.executeUpdate();
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
 }
