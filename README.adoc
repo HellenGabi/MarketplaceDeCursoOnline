@@ -9,6 +9,14 @@ A NebulaPro é uma plataforma que oferece cursos online para alunos em diversas 
 == 🎯 Problema
 A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam cadastrar seus cursos, gerenciar as turmas e interagir com os alunos. Ao mesmo tempo, os alunos devem ser capazes de buscar cursos, se inscrever e acompanhar seu progresso. A empresa também precisa de um controle robusto para gerenciar os pagamentos, os certificados dos alunos e a avaliação da qualidade dos cursos.
 
+== ⚙️ Funcionalidades Mínimas
+
+* Separação de responsabilidades: camadas Model, DAO, Service e View/Menu
+* Persistência de dados com JDBC (MySQL)
+* Padrões de projeto: DAO para acesso a dados, Singleton para conexão com banco
+* Sistema de matrícula, avaliação
+* Estrutura preparada para integração com APIs de pagamento e autenticação de usuários
+
 == 🗂️ Requisitos Funcionais
 
 **1️⃣ Cadastro de Curso**
