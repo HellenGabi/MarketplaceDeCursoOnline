@@ -137,8 +137,6 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 image::diagramaClasse.jpg[alt=Diagrama, width=200px]
 
-== 💡 Estratégias de Segurança e Qualidade
-
 == 💼 Organização do Trabalho e Metodologia
 
 == 🛠️ Tecnologias Utilizadas
