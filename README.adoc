@@ -90,6 +90,47 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 == 🔐 Requisitos não Funcionais
 
+** 🧠 Desempenho 
+
+* O sistema deve responder às consultas (ex: listagem de cursos) em até 2 segundos.
+
+* As operações de cadastro e matrícula devem ser concluídas em no máximo 3 segundos.
+
+** 🔒 Segurança 
+
+* O sistema deve validar todas as entradas para evitar injeções SQL.
+
+* As senhas dos usuários devem ser armazenadas de forma segura (ex: com hash).
+
+** ⚙️ Confiabilidade 
+
+* O sistema deve manter os dados consistentes mesmo em caso de falhas.
+
+* Deve haver tratamento de erros com mensagens amigáveis para o usuário.
+
+** 🧩 Manutenibilidade 
+
+* O código deve seguir a organização em camadas (Model, DAO, Service, View).
+
+* O uso de padrões de projeto (DAO, Singleton) deve ser aplicado corretamente.
+
+** 💻 Usabilidade 
+
+* A interface deve ser simples e intuitiva para alunos e professores.
+
+* As mensagens exibidas devem ser claras e fáceis de entender.
+
+** 🔄 Portabilidade 
+
+* O sistema deve ser compatível com Java 17+ e MySQL 8+.
+
+* Deve funcionar em diferentes sistemas operacionais (Windows, Linux, MacOS).
+
+** 🚀 Escalabilidade (para futuras versões) 
+
+* A arquitetura deve permitir a integração futura com API REST.
+
+* O sistema deve estar preparado para integração com APIs de pagamento e autenticação.
 
 == 🏡 Modelagem Arquitetural
 **Diagrama de Classe**
