@@ -22,10 +22,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        AlunoDAO alunoDAO = new AlunoDAO();
-        ProfessorDAO professorDAO = new ProfessorDAO();
-        CursoDAO cursoDAO = new CursoDAO();
-        MatriculaDAO matriculaDAO = new MatriculaDAO();
 
         while (true) {
             // Exibir o menu
