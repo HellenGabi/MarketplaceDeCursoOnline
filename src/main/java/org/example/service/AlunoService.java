@@ -1,10 +1,8 @@
-package org.example.SERVICE;
+package org.example.service;
 
 import org.example.DAO.AlunoDAO;
-import org.example.MODEL.Aluno;
+import org.example.model.Aluno;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class AlunoService {

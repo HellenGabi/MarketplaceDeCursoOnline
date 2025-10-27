@@ -1,7 +1,7 @@
-package org.example.VIEW;
+package org.example.view;
 
 import org.example.CONTROLLER.ProfessorController;
-import org.example.MODEL.Professor;
+import org.example.model.Professor;
 
 import java.util.List;
 

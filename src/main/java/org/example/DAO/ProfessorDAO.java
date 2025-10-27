@@ -1,9 +1,8 @@
 package org.example.DAO;
 
-import org.example.DATABASE.Conexao;
-import org.example.MODEL.Professor;
+import org.example.conexao.Conexao;
+import org.example.model.Professor;
 
-import javax.naming.ContextNotEmptyException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

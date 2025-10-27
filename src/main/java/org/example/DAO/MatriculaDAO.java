@@ -1,7 +1,7 @@
 package org.example.DAO;
 
-import org.example.DATABASE.Conexao;
-import org.example.MODEL.Matricula;
+import org.example.conexao.Conexao;
+import org.example.model.Matricula;
 
 import java.sql.*;
 import java.time.LocalDate;

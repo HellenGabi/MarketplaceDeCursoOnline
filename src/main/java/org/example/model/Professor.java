@@ -1,35 +1,29 @@
-package org.example.MODEL;
+package org.example.model;
 
-import java.time.LocalDate;
-
-public class Aluno {
+public class Professor {
 
     private int id;
     private String nome;
     private String cpf;
     private String email;
     private int idade;
-    private String cursoDesejado;
-    private LocalDate dataEntrada;
+    private String formacao;
 
-
-    public Aluno(int id, String nome, String cpf, String email, int idade, String cursoDesejado, LocalDate dataEntrada) {
+    public Professor(int id, String nome, String cpf, String email, int idade, String formacao) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
         this.idade = idade;
-        this.cursoDesejado = cursoDesejado;
-        this.dataEntrada = dataEntrada;
+        this.formacao = formacao;
     }
 
-    public Aluno(String nome,String cpf, String email, int idade, String cursoDesejado, LocalDate dataEntrada) {
+    public Professor(String nome, String cpf, String email, int idade, String formacao) {
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
         this.idade = idade;
-        this.cursoDesejado = cursoDesejado;
-        this.dataEntrada = dataEntrada;
+        this.formacao = formacao;
     }
 
     public int getId() {
@@ -72,19 +66,11 @@ public class Aluno {
         this.idade = idade;
     }
 
-    public String getCursoDesejado() {
-        return cursoDesejado;
+    public String getFormacao() {
+        return formacao;
     }
 
-    public void setCursoDesejado(String cursoDesejado) {
-        this.cursoDesejado = cursoDesejado;
-    }
-
-    public LocalDate getDataEntrada() {
-        return dataEntrada;
-    }
-
-    public void setDataEntrada(LocalDate dataEntrada) {
-        this.dataEntrada = dataEntrada;
+    public void setFormacao(String formacao) {
+        this.formacao = formacao;
     }
 }

@@ -5,11 +5,11 @@ import org.example.DAO.AlunoDAO;
 import org.example.DAO.CursoDAO;
 import org.example.DAO.MatriculaDAO;
 import org.example.DAO.ProfessorDAO;
-import org.example.MODEL.Aluno;
-import org.example.MODEL.Curso;
-import org.example.MODEL.Matricula;
-import org.example.MODEL.Professor;
-import org.example.UTIL.Validacoes;
+import org.example.model.Aluno;
+import org.example.model.Curso;
+import org.example.model.Matricula;
+import org.example.model.Professor;
+import org.example.util.Validacoes;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -29,13 +29,7 @@ public class Main {
 
         while (true) {
             // Exibir o menu
-            System.out.println("""
-                    
-                     ____________________________________
-                    |               Menu                 |
-                    |____________________________________|
-                     
-                    """);
+            System.out.println("Menu");
             System.out.println("1. Cadastrar Aluno");
             System.out.println("2. Cadastrar Professor");
             System.out.println("3. Cadastrar Curso");
@@ -80,7 +74,7 @@ public class Main {
                     cancelamentoMatricula();
                     break;
                 case 10:
-                    //buscarAlunoCurso();
+                    buscarAlunoCurso();
                     break;
                 case 11:
                     System.out.println("Saindo...");
@@ -314,6 +308,10 @@ public class Main {
         }
     }
     public static void cancelamentoMatricula(){
+
+    }
+
+    public static void buscarAlunoCurso(){
 
     }
 }

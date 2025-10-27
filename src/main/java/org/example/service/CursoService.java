@@ -1,9 +1,8 @@
-package org.example.SERVICE;
+package org.example.service;
 
-import java.sql.SQLException;
 import java.util.List;
 import org.example.DAO.CursoDAO;
-import org.example.MODEL.Curso;
+import org.example.model.Curso;
 
 public class CursoService {
 

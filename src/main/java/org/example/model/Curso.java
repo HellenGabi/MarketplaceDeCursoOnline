@@ -1,4 +1,4 @@
-package org.example.MODEL;
+package org.example.model;
 
 public class Curso {
 

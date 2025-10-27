@@ -1,6 +1,4 @@
-package org.example.MODEL;
-
-import org.example.CONTROLLER.AlunoController;
+package org.example.model;
 
 import java.time.LocalDate;
 

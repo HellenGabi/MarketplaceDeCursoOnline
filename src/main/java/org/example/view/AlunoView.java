@@ -1,6 +1,6 @@
-package org.example.VIEW;
+package org.example.view;
 import org.example.CONTROLLER.AlunoController;
-import org.example.MODEL.Aluno;
+import org.example.model.Aluno;
 
 import java.util.List;
 

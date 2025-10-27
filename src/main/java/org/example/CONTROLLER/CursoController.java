@@ -1,7 +1,7 @@
 package org.example.CONTROLLER;
 
-import org.example.MODEL.Curso;
-import org.example.SERVICE.CursoService;
+import org.example.model.Curso;
+import org.example.service.CursoService;
 
 import java.util.List;
 

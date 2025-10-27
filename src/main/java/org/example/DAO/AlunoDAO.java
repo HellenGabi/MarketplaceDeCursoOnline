@@ -1,7 +1,7 @@
 package org.example.DAO;
 
-import org.example.DATABASE.Conexao;
-import org.example.MODEL.Aluno;
+import org.example.conexao.Conexao;
+import org.example.model.Aluno;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;

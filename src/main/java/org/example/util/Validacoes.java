@@ -1,4 +1,4 @@
-package org.example.UTIL;
+package org.example.util;
 
 public class Validacoes {
 

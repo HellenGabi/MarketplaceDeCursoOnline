@@ -1,7 +1,7 @@
 package org.example.DAO;
 
-import org.example.DATABASE.Conexao;
-import org.example.MODEL.Curso;
+import org.example.conexao.Conexao;
+import org.example.model.Curso;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

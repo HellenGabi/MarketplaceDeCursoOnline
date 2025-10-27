@@ -1,7 +1,7 @@
 package org.example.CONTROLLER;
 
-import org.example.MODEL.Aluno;
-import org.example.SERVICE.AlunoService;
+import org.example.model.Aluno;
+import org.example.service.AlunoService;
 
 import java.time.LocalDate;
 import java.util.List;
