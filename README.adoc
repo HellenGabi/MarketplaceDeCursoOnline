@@ -68,23 +68,19 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 
 * O sistema deve permitir que um aluno cancele sua matrícula em um curso.
 
-**6️⃣ Busca de Aluno por Curso**
-
-* O sistema deve permitir a busca de alunos matriculados em um curso específico.
-
-**7️⃣ Listagem de Cursos**
+**6️⃣ Listagem de Cursos**
 
 * O sistema deve permitir a listagem de todos os cursos cadastrados.
 
-**8️⃣ Listagem de Alunos**
+**7️⃣ Listagem de Alunos**
 
 * O sistema deve permitir a listagem de todos os alunos cadastrados.
 
-**9️⃣ Listagem de Professores**
+**8️⃣ Listagem de Professores**
 
 * O sistema deve permitir a listagem de todos os professores cadastrados.
 
-**1️⃣0️⃣ Matrícula de Aluno em Curso**
+**9️⃣ Matrícula de Aluno em Curso**
 
 * O sistema deve permitir que um aluno se matricule em um curso, gerando uma “nota” mostrando que está matriculado.
 
