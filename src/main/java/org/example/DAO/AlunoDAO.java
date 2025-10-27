@@ -76,4 +76,29 @@ public class AlunoDAO {
         return false;
     }
 
+    public boolean buscarAlunoCurso(int idCurso) {
+        String sql = """
+            SELECT a.id, a.nome, a.email, c.nome AS nome_curso
+            FROM aluno a
+            INNER JOIN curso c ON a.id_curso = c.id
+            WHERE c.id = ?
+        """;
+
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, idCurso);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                return true;
+            }
+
+        } catch (SQLException e) {
+         e.printStackTrace();
+        }
+        return false;
+    }
+
+
 }

@@ -32,6 +32,12 @@ public class Aluno {
         this.dataEntrada = dataEntrada;
     }
 
+    public Aluno(int idAluno, String nome, String email, String curso) {
+    }
+
+    public Aluno() {
+    }
+
     public int getId() {
         return id;
     }

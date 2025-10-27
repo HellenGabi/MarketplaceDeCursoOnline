@@ -1,5 +1,8 @@
 package org.example.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Professor {
 
     private int id;
@@ -8,6 +11,8 @@ public class Professor {
     private String email;
     private int idade;
     private String formacao;
+
+    private List<Curso> cursos = new ArrayList<>();
 
     public Professor(int id, String nome, String cpf, String email, int idade, String formacao) {
         this.id = id;
@@ -24,6 +29,14 @@ public class Professor {
         this.email = email;
         this.idade = idade;
         this.formacao = formacao;
+    }
+
+    public void inserirCurso(Curso curso) {
+        this.cursos.add(curso);
+    }
+
+    public List<Curso> getCursos() {
+        return cursos;
     }
 
     public int getId() {
@@ -73,4 +86,6 @@ public class Professor {
     public void setFormacao(String formacao) {
         this.formacao = formacao;
     }
+
+
 }

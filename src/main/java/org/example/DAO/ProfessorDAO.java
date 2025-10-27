@@ -40,7 +40,7 @@ public class ProfessorDAO {
         PreparedStatement stmt = conn.prepareStatement(query)){
             ResultSet rs = stmt.executeQuery();
 
-            if(rs.next()){
+            while(rs.next()){
                 int id = rs.getInt("id");
                 String nome = rs.getString("nome");
                 String cpf = rs.getString("cpf");
@@ -82,6 +82,21 @@ public class ProfessorDAO {
             PreparedStatement stmt = conn.prepareStatement(query)){
 
         } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void associarProfessorCurso(int idProfessor, int idCurso) {
+        String sql = "INSERT INTO Curso (idProfessor, id) VALUES (?, ?)";
+
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, idProfessor);
+            stmt.setInt(2, idCurso);
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

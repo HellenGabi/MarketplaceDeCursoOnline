@@ -52,23 +52,49 @@ public class MatriculaDAO {
         return matriculas;
     }
 
-    public boolean buscarMatriculaPorId(int idMatricula) {
-
-        String query = "SELECT id, alunoId FROM Matricula WHERE id = ?";
+    public List<Matricula> buscarPorCurso(int idCurso) {
+        List<Matricula> lista = new ArrayList<>();
+        String sql = "SELECT * FROM Matricula WHERE id = ?";
 
         try (Connection conn = Conexao.conectar();
-             PreparedStatement stmt = conn.prepareStatement(query)){
-            stmt.setInt(1, idMatricula);
-            ResultSet rs = stmt.executeQuery();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            if(rs.next()){
-                return true;
+            ps.setInt(1, idCurso);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                lista.add(new Matricula(
+                        rs.getInt("id_aluno"),
+                        rs.getInt("id_curso"),
+                        rs.getDate("data").toLocalDate(),
+                        rs.getInt("nota")
+                ));
             }
-        } catch (SQLException e){
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false;
+
+        return lista;
     }
+
+ public boolean buscarMatriculaPorId(int idMatricula) {
+
+    String query = "SELECT id, alunoId FROM Matricula WHERE id = ?";
+
+    try (Connection conn = Conexao.conectar();
+         PreparedStatement stmt = conn.prepareStatement(query)){
+        stmt.setInt(1, idMatricula);
+        ResultSet rs = stmt.executeQuery();
+
+        if(rs.next()){
+            return true;
+        }
+    } catch (SQLException e){
+        e.printStackTrace();
+    }
+    return false;
+}
 
     public void deletarMatricula(int idMatricula) {
         String query = "DELETE FROM Matricula WHERE id = ?";
@@ -78,6 +104,8 @@ public class MatriculaDAO {
 
             stmt.setInt(1, idMatricula);
             stmt.executeUpdate();
+
+
 
         } catch (SQLException e){
             e.printStackTrace();
