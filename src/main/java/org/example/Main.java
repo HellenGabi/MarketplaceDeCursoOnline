@@ -36,8 +36,7 @@ public class Main {
             System.out.println("7. Listar Cursos");
             System.out.println("8. Associar Professor ao Curso");
             System.out.println("9. Cancelar Matricula");
-            System.out.println("10. Buscar Aluno por Curso");
-            System.out.println("11. Sair");
+            System.out.println("10. Sair");
             System.out.print("Escolha uma opção: ");
 
 
