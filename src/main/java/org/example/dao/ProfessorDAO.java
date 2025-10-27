@@ -1,4 +1,4 @@
-package org.example.DAO;
+package org.example.dao;
 
 import org.example.conexao.Conexao;
 import org.example.model.Professor;

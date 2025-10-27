@@ -1,9 +1,12 @@
 package org.example.view;
 
-import org.example.CONTROLLER.ProfessorController;
+import org.example.controller.ProfessorController;
 import org.example.model.Professor;
-
 import java.util.List;
+
+
+// View: responsável por apresentar dados ao usuário (aqui: console).
+// View chama o controller para obter os dados.
 
 public class ProfessorView {
 

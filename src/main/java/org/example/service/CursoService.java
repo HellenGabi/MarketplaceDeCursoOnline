@@ -1,7 +1,7 @@
 package org.example.service;
 
 import java.util.List;
-import org.example.DAO.CursoDAO;
+import org.example.dao.CursoDAO;
 import org.example.model.Curso;
 
 public class CursoService {

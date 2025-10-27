@@ -1,12 +1,12 @@
-package org.example.CONTROLLER;
+package org.example.controller;
 
 import org.example.model.Professor;
 import org.example.service.ProfessorService;
-
 import java.util.List;
 
-public class ProfessorController {
+ //Comportamento: Controller — coordena operações entre View e Service/Model
 
+public class ProfessorController {
 
         private ProfessorService professorService;
 

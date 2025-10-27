@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.DAO.ProfessorDAO;
+import org.example.dao.ProfessorDAO;
 import org.example.model.Professor;
 
 import java.util.List;

@@ -1,10 +1,12 @@
-package org.example.CONTROLLER;
+package org.example.controller;
 
 import org.example.model.Aluno;
 import org.example.service.AlunoService;
-
 import java.time.LocalDate;
 import java.util.List;
+
+
+ //Comportamento: Controller — coordena operações entre View e Service/Model
 
 public class AlunoController {
 

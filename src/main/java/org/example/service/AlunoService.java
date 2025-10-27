@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.DAO.AlunoDAO;
+import org.example.dao.AlunoDAO;
 import org.example.model.Aluno;
 
 import java.util.List;

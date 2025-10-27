@@ -1,10 +1,10 @@
 package org.example;
 
 
-import org.example.DAO.AlunoDAO;
-import org.example.DAO.CursoDAO;
-import org.example.DAO.MatriculaDAO;
-import org.example.DAO.ProfessorDAO;
+import org.example.dao.AlunoDAO;
+import org.example.dao.CursoDAO;
+import org.example.dao.MatriculaDAO;
+import org.example.dao.ProfessorDAO;
 import org.example.model.Aluno;
 import org.example.model.Curso;
 import org.example.model.Matricula;

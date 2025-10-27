@@ -1,9 +1,11 @@
-package org.example.CONTROLLER;
+package org.example.controller;
 
 import org.example.model.Curso;
 import org.example.service.CursoService;
-
 import java.util.List;
+
+
+ // Comportamento: Controller — coordena operações entre View e Service/Model
 
 public class CursoController {
 
