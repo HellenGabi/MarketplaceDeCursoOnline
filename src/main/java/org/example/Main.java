@@ -29,7 +29,8 @@ public class Main {
 
         while (true) {
             // Exibir o menu
-            System.out.println("Menu");
+            System.out.println("--------------------------------------------------------");
+            System.out.println("=== Menu ===");
             System.out.println("1. Cadastrar Aluno");
             System.out.println("2. Cadastrar Professor");
             System.out.println("3. Cadastrar Curso");
@@ -42,6 +43,7 @@ public class Main {
             System.out.println("10. Buscar Aluno por Curso");
             System.out.println("11. Sair");
             System.out.print("Escolha uma opção: ");
+
 
             int opcao = Integer.parseInt(scanner.nextLine());
 
@@ -187,11 +189,14 @@ public class Main {
        for (Aluno a : alunoDAO.listaAluno()) {
            System.out.println("ID: " + a.getId() + " - Nome: " + a.getNome());
        }
+       System.out.println("--------------------------------------------------------");
 
        System.out.println("\nLista de Cursos:");
        for (Curso c : cursoDAO.listaCurso()) {
            System.out.println("ID: " + c.getId() + " - Nome: " + c.getNome());
        }
+       System.out.println("--------------------------------------------------------");
+
 
        System.out.print("\nInforme o ID do aluno: ");
        int idAluno = Integer.parseInt(scanner.nextLine());
@@ -227,6 +232,8 @@ public class Main {
            System.out.println("ID: " + a.getId());
            System.out.println("Nome: " + a.getNome());
            System.out.println("Curso Desejado: " + a.getCursoDesejado());
+           System.out.println("--------------------------------------------------------");
+
        }
    }
     public static void listarProfessores(){
@@ -238,6 +245,8 @@ public class Main {
             System.out.println("ID: " + p.getId());
             System.out.println("Nome: " + p.getNome());
             System.out.println("Formação: " + p.getFormacao());
+            System.out.println("--------------------------------------------------------");
+
         }
     }
 
@@ -270,11 +279,15 @@ public class Main {
             System.out.println("Nome: " + p.getNome());
             System.out.println("Formação: " + p.getFormacao());
             opcoesProf.add(p.getId());
+            System.out.println("--------------------------------------------------------");
+
         }
 
         System.out.println("Digite o ID do professor que deseja: ");
         int idProf = scanner.nextInt();
         scanner.nextLine();
+        System.out.println("--------------------------------------------------------");
+
 
         if (opcoesProf.contains(idProf)) {
             List<Integer> opcoesCurso = new ArrayList<>();
@@ -315,11 +328,15 @@ public class Main {
         List<Matricula> matriculas = dao.listaMatricula();
 
         for (Matricula matricula : matriculas) {
+            System.out.println("--------------------------------------------------------");
+
             System.out.println("\n MATRICULAS ");
             System.out.println("Id: " + matricula.getId());
             System.out.println("Id Aluno: " + matricula.getIdAluno());
             System.out.println("Id Curso: " + matricula.getIdCurso());
             System.out.println("Data entrada: " + matricula.getDataEntrada());
+            System.out.println("--------------------------------------------------------");
+
         }
 
         System.out.println("Digite o ID da matricula q deseja com: ");
