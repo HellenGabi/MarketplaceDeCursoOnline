@@ -1,4 +1,5 @@
- = 📚 Marketplace de Cursos Online
+= 📚 Marketplace de Cursos Online
+
 :icons: font
 :toc: left
 :toclevels: 2
@@ -137,7 +138,7 @@ image::diagramaClasse.jpg[alt=Diagrama, width=200px]
 * 1️⃣ Clone o repositório
 Abra o terminal e execute:
 
- git clone https://github.com/SEU-USUARIO/MarketplaceDeCursoOnline.git
+ git clone https://github.com/HellenGabi/MarketplaceDeCursoOnline.git
 
 * Depois entre na pasta do projeto:
 
