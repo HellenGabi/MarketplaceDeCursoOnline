@@ -16,7 +16,7 @@ A NebulaPro deseja criar um marketplace online de cursos onde instrutores possam
 * Persistência de dados com JDBC (MySQL)
 * Padrões de projeto: DAO para acesso a dados, Singleton para conexão com banco
 * Sistema de matrícula, avaliação
-* Estrutura preparada para integração com APIs de pagamento e autenticação de usuários
+* Estrutura preparada para integração com APIs de autenticação de usuários
 
 == 🗂️ Requisitos Funcionais
 **1️⃣ Cadastro de Aluno**
